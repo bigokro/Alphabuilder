@@ -1,0 +1,76 @@
+package objects
+{
+	public class StateIdentifiers
+	{
+		public static const BLANK:String = "Blank";
+		public static const RIGHTPAREN:String = "RightParen";
+		public static const DASH:String = "Dash";
+		public static const LEFTBRACKET:String = "LeftBracket";
+		public static const A:String = "A";
+		public static const ALEFT:String = "ALeft";
+		public static const ARIGHT:String = "ARight";
+		public static const B:String = "B";
+		public static const BBOTTOM:String = "BBottom";
+		public static const BRIGHT:String = "BRight";
+		public static const BACKSLASH:String = "BackSlash";
+		public static const BACKSLASHBACKSLASH:String = "BackSlashBackSlash";
+		public static const C:String = "C";
+		public static const D:String = "D";
+		public static const E:String = "E";
+		public static const ERIGHT:String = "ERight";
+		public static const F:String = "F";
+		public static const FINVERTED:String = "FInverted";
+		public static const G:String = "G";
+		public static const H:String = "H";
+		public static const HLEFT:String = "HLeft";
+		public static const HRIGHT:String = "HRight";
+		public static const I:String = "I";
+		public static const II:String = "II";
+		public static const ISLASH:String = "ISlash";
+		public static const J:String = "J";
+		public static const K:String = "K";
+		public static const KBOTTOM:String = "KBottom";
+		public static const KRIGHT:String = "KRight";
+		public static const KTOP:String = "KTop";
+		public static const L:String = "L";
+		public static const LAMBDA:String = "Lambda";
+		public static const LINVERTED:String = "LInverted";
+		public static const M:String = "M";
+		public static const MLEFT2:String = "MLeft2";
+		public static const MRIGHT:String = "MRight";
+		public static const IMRIGHT:String = "IMRight";
+		public static const MRIGHT2:String = "MRight2";
+		public static const N:String = "N";
+		public static const NLEFT:String = "NLeft";
+		public static const NRIGHT:String = "NRight";
+		public static const O:String = "O";
+		public static const P:String = "P";
+		public static const Q:String = "Q";
+		public static const QBOTTOM:String = "QBottom";
+		public static const QLEFT:String = "QLeft";
+		public static const QRIGHT:String = "QRight";
+		public static const QTOP:String = "QTop";
+		public static const R:String = "R";
+		public static const RRIGHT:String = "RRight";
+		public static const S:String = "S";
+		public static const SLASH:String = "Slash";
+		public static const SLASHSLASH:String = "SlashSlash";
+		public static const T:String = "T";
+		public static const U:String = "U";
+		public static const UINVERTED:String = "UInverted";
+		public static const V:String = "V";
+		public static const BACKSLASHV:String = "BackSlashV";
+		public static const VSLASH:String = "VSlash";
+		public static const W:String = "W";
+		public static const WLEFT2:String = "WLeft2";
+		public static const WRIGHT2:String = "WRight2";
+		public static const X:String = "X";
+		public static const Y:String = "Y";
+		public static const YLEFT:String = "YLeft";
+		public static const YRIGHT:String = "YRight";
+		public static const Z:String = "Z";
+		public static const ZBARS:String = "ZBars";
+		public static const ZBOTTOM:String = "ZBottom";
+		public static const ZTOP:String = "ZTop";
+	}
+}

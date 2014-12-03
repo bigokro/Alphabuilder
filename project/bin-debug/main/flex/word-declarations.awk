@@ -1,0 +1,2 @@
+/[a-zA-Z]+/ { capitalized = toupper(substr($1, 1, 1)) substr($1, 2); print "Words[\"" toupper($1) "\"] = new Word(\"" toupper($1) "\", \"" toupper($2) "\", $1 "Images");"; };
+/^[^a-zA-Z]*$/ { print "" };

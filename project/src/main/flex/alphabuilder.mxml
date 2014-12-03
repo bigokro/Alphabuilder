@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	layout="absolute"
+	width="100%"
+	height="100%"
+	frameRate="100"
+	creationComplete="creationComplete()"
+	currentState="Builder">
+	<mx:TraceTarget/>
+	<mx:states>
+		<mx:State
+			name="Builder"
+			enterState="enterBuilder(event)"
+			exitState="exitBuilder(event)">
+		</mx:State>
+	</mx:states>
+
+	<mx:Canvas x="0" y="0" width="50%" height="100%" id="builderCanvas"/>
+	<mx:Canvas x="0" y="0" width="50%" height="100%" id="pictureCanvas" creationComplete="pictureCanvas.x = builderCanvas.width;"/>
+	<mx:Script>
+		<![CDATA[
+			protected var inBuilder:Boolean = false;
+
+			public function creationComplete():void
+			{
+			}
+
+			protected function startBuilderClicked(event:Event):void
+			{
+				currentState = "Builder"
+			}
+			
+			protected function enterBuilder(event:Event):void
+			{
+				BuilderTool.Instance.startup(builderCanvas, pictureCanvas);
+				inBuilder = true;
+			}
+
+			protected function exitBuilder(event:Event):void
+			{
+				BuilderTool.Instance.shutdown();
+				inBuilder = false;
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

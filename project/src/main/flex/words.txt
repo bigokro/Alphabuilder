@@ -1,0 +1,22 @@
+aladdin	characters
+apple	food
+aurora	characters
+ariel	characters
+
+bird	animals
+barbie	characters
+bubbles	characters
+blossom	characters
+buttercup	characters
+
+piano	instruments
+polly	characters
+
+shell	sea
+slide	park
+snake	animals
+
+tree	plants
+
+
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	layout="absolute"
+	width="100%"
+	height="100%"
+	frameRate="100"
+	creationComplete="creationComplete()"
+	currentState="Game">
+	<mx:TraceTarget/>
+	<mx:states>
+		<mx:State
+			name="Game"
+			enterState="enterGame(event)"
+			exitState="exitGame(event)">
+		</mx:State>
+	</mx:states>
+
+	<mx:Canvas x="0" y="0" width="50%" height="100%" id="builderCanvas"/>
+	<mx:Canvas x="0" y="0" width="50%" height="100%" id="pictureCanvas" creationComplete="pictureCanvas.x = builderCanvas.width;"/>
+	<mx:Script>
+		<![CDATA[
+			protected var inGame:Boolean = false;
+
+			public function creationComplete():void
+			{
+			}
+
+			protected function startGameClicked(event:Event):void
+			{
+				currentState = "Game"
+			}
+			
+			protected function enterGame(event:Event):void
+			{
+				AlphabetrisGame.AlphabetrisInstance.startup(builderCanvas, pictureCanvas);
+				inGame = true;
+			}
+
+			protected function exitGame(event:Event):void
+			{
+				AlphabetrisGame.AlphabetrisInstance.shutdown();
+				inGame = false;
+			}
+		]]>
+	</mx:Script>
+</mx:Application>

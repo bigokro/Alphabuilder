@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+	width="100%"
+	height="100%"
+	frameRate="100"
+	creationComplete="creationComplete()">
+	
+	<mx:Canvas x="0" y="0" width="50%" height="100%" id="builderCanvas"/>
+	<mx:Canvas x="0" y="0" width="50%" height="100%" id="pictureCanvas" creationComplete="pictureCanvas.x = builderCanvas.width;"/>
+	<fx:Script>
+		<![CDATA[
+		protected var inGame:Boolean = false;
+		
+		public function creationComplete():void
+		{
+			//startGameClicked(null);
+			enterGame(null);
+		}
+		
+		protected function startGameClicked(event:Event):void
+		{
+			currentState = "Game"
+		}
+		
+		protected function enterGame(event:Event):void
+		{
+			Alphawriter.AlphawriterInstance.startup(builderCanvas, pictureCanvas);
+			inGame = true;
+		}
+		
+		protected function exitGame(event:Event):void
+		{
+			Alphawriter.AlphawriterInstance.shutdown();
+			inGame = false;
+		}
+		]]>
+	</fx:Script>
+</s:Application>
